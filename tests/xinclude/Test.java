@@ -410,6 +410,7 @@ public class Test implements XMLErrorHandler {
         fOutputWriter.flush();
     } // printError(String,XMLParseException)
 
+    //TODO: Dereference of the result of readLine() without nullcheck
     protected boolean compareOutput(Reader expected, Reader actual)
         throws IOException {
         LineNumberReader expectedOutput = new LineNumberReader(expected);
