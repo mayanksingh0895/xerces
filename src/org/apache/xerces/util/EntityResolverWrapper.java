@@ -88,7 +88,6 @@ public class EntityResolverWrapper
      * @throws IOException  Thrown if resolved entity stream cannot be
      *                      opened or some other i/o error occurs.
      */
-    //TODO: Nullcheck of resourceIdentifier at line 105 of value previously dereferenced in org.apache.xerces.util.EntityResolverWrapper.resolveEntity(XMLResourceIdentifier)
     public XMLInputSource resolveEntity(XMLResourceIdentifier resourceIdentifier)
         throws XNIException, IOException {
 
@@ -103,7 +102,7 @@ public class EntityResolverWrapper
             return null;
 
         // resolve entity using SAX entity resolver
-        if (fEntityResolver != null && resourceIdentifier != null) {
+        if (fEntityResolver != null) {
             try {
                 InputSource inputSource = fEntityResolver.resolveEntity(pubId, sysId);
                 if (inputSource != null) {
