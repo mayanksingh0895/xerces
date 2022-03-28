@@ -96,6 +96,7 @@ public class CMLeaf
         return (fPosition == -1);
     }
 
+    //TODO: ConsecutiveAppendsShouldReuse
     public String toString()
     {
         StringBuffer strRet = new StringBuffer(fElement.toString());
