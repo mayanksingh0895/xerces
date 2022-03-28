@@ -144,6 +144,7 @@ public class DOMTree
             } // setDocument(Document)
 
         /** Returns the document. */
+        //FIXME: ui.DOMTree$Model.getDocument() is unsynchronized, ui.DOMTree$Model.setDocument(Document) is synchronized
         public Document getDocument() {
             return document;
             }
