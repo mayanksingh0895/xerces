@@ -137,7 +137,6 @@ public class TreeWalkerView
     Hashtable treeNodeMap = new Hashtable();
 
     /** Constructor */
-    //TODO: Dead store to borderLayout in new dom.traversal.TreeWalkerView(String)
     public TreeWalkerView (String filename) {
         super("TreeWalkerView: "+filename);
         try {
@@ -176,7 +175,6 @@ public class TreeWalkerView
             // controls
             //
             
-            BorderLayout borderLayout = new BorderLayout();
             
             //iterate panel
             JPanel iteratePanel = new JPanel();
