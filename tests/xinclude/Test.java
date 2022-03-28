@@ -410,7 +410,6 @@ public class Test implements XMLErrorHandler {
         fOutputWriter.flush();
     } // printError(String,XMLParseException)
 
-    //TODO: Dereference of the result of readLine() without nullcheck
     protected boolean compareOutput(Reader expected, Reader actual)
         throws IOException {
         LineNumberReader expectedOutput = new LineNumberReader(expected);
@@ -418,13 +417,15 @@ public class Test implements XMLErrorHandler {
 
         while (expectedOutput.ready() && actualOutput.ready()) {
             String expectedLine = expectedOutput.readLine();
-            String actualLine = actualOutput.readLine();
-            if (!expectedLine.equals(actualLine)) {
-                fLogStream.println(
-                    "Mismatch on line: " + expectedOutput.getLineNumber());
-                fLogStream.println("Expected: " + expectedLine);
-                fLogStream.println("  Actual: " + actualLine);
-                return false;
+            if (expectedLine != null) {
+                String actualLine = actualOutput.readLine();
+                if (!expectedLine.equals(actualLine)) {
+                    fLogStream.println(
+                        "Mismatch on line: " + expectedOutput.getLineNumber());
+                    fLogStream.println("Expected: " + expectedLine);
+                    fLogStream.println("  Actual: " + actualLine);
+                    return false;
+                }
             }
         }
         if (expectedOutput.ready() && !actualOutput.ready()) {
