@@ -748,7 +748,7 @@ public class DOMNormalizer implements XMLDocumentHandler {
     // normalize attribute values
     // remove default attributes
     // check attribute names if the version of the document changed.
-    
+    //TODO: Comparison of String objects using == or != in org.apache.xerces.dom.DOMNormalizer.namespaceFixUp(ElementImpl, AttributeMap)
     protected final void namespaceFixUp (ElementImpl element, AttributeMap attributes){
         if (DEBUG) {
             System.out.println("[ns-fixup] element:" +element.getNodeName()+
