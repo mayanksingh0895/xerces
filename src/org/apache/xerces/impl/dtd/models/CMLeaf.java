@@ -90,11 +90,10 @@ public class CMLeaf
 
     // package
 
-    //TODO: Useless parentheses
     public boolean isNullable() 
     {
         // Leaf nodes are never nullable unless its an epsilon node
-        return (fPosition == -1);
+        return fPosition == -1;
     }
 
     public String toString()
