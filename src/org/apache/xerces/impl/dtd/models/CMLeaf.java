@@ -127,16 +127,17 @@ public class CMLeaf
             toSet.setBit(fPosition);
     }
 
-    //TODO: If else statement must have braces
     protected void calcLastPos(CMStateSet toSet) 
     {
         // If we are an epsilon node, then the last pos is an empty set
-        if (fPosition == -1)
+        if (fPosition == -1) {
             toSet.zeroBits();
+        }
 
         // Otherwise, its just the one bit of our position
-        else
+        else {
             toSet.setBit(fPosition);
+        }
     }
 
 } // class CMLeaf
