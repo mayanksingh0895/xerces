@@ -586,9 +586,8 @@ final class JAXPValidatorComponent
     public void setProperty(String propertyId, Object value) throws XMLConfigurationException {
     }
     
-    //TODO: org.apache.xerces.jaxp.JAXPValidatorComponent.getFeatureDefault(String) has Boolean return type and returns explicit null
     public Boolean getFeatureDefault(String featureId) {
-        return null;
+        return Boolean.FALSE;
     }
 
     public Object getPropertyDefault(String propertyId) {
