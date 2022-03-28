@@ -97,15 +97,14 @@ public class CMLeaf
         return (fPosition == -1);
     }
 
-    //TODO: ConsecutiveAppendsShouldReuse
     public String toString()
     {
         StringBuffer strRet = new StringBuffer(fElement.toString());
-        strRet.append(" (");
-        strRet.append(fElement.uri);
-        strRet.append(',');
-        strRet.append(fElement.localpart);
-        strRet.append(')');
+        strRet.append(" (")
+              .append(fElement.uri)
+              .append(',')
+              .append(fElement.localpart)
+              .append(')');
         if (fPosition >= 0) {
             strRet.append(" (Pos:")
                   .append(Integer.toString(fPosition))
